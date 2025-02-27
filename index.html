@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileBestie - Find Your Lost Files</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom right, #4f46e5, #9333ea);
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .button {
+            background: #facc15;
+            color: black;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #fbbf24;
+        }
+        .testimonial {
+            font-size: 18px;
+            font-style: italic;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet FileBestie</h1>
+    <p>Your AI-powered best friend for finding lost files effortlessly.</p>
+    
+    <div class="container">
+        <h2>How It Works</h2>
+        <p>Describe your file vaguely, and our AI will track it down in seconds using smart search and deep file analysis.</p>
+    </div>
+    
+    <div class="container">
+        <h2>What People Say</h2>
+        <p class="testimonial" id="testimonial">"FileBestie saved me hours of searching! - Alex"</p>
+        <button class="button" onclick="nextTestimonial()">Next Testimonial</button>
+    </div>
+    
+    <button class="button" style="margin-top: 20px;">Try FileBestie Now</button>
+    
+    <script>
+        const testimonials = [
+            "FileBestie saved me hours of searching! - Alex",
+            "I found my lost project in seconds. Incredible! - Jamie",
+            "A must-have for anyone with tons of files! - Casey"
+        ];
+        let index = 0;
+        function nextTestimonial() {
+            index = (index + 1) % testimonials.length;
+            document.getElementById("testimonial").innerText = testimonials[index];
+        }
+    </script>
+</body>
+</html>
